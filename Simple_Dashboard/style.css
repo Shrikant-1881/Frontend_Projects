@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main_box{
+    height: 100vh;
+    background: url(back.jpeg);
+    background-size: cover;
+}
+.btn_one i{
+    font-size: 35px;
+    font-weight: 70px;
+    color: white;
+    position: absolute;
+    left:16px;
+    line-height: 70px;
+    transition:all 0.2s linear;
+    cursor: pointer;  /*to make the mouse pointer to become hand while it goes on the button*/
+}
+.sideBar{
+    position:fixed;
+    left: -350px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.83);
+    box-shadow: 2px 2px 10px gray;
+    transition:all 0.3s linear;
+}
+.WebsiteLogo{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    line-height: 80px;
+    box-shadow: 2px 2px 10px gray;
+}
+.WebsiteLogo a{
+    position: absolute;
+    left: 50px;
+    color: grey;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.btn_two i{
+    position: absolute;
+    color: grey;
+    font-size: 20px;
+    opacity: 0;
+    left: 90%;
+    top: 10px;
+    transition:all 0.2s linear;
+    cursor: pointer;  /*to make the mouse pointer to become hand while it goes on the button*/
+}
+.sideBar .menu {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+.sideBar .menu li{
+    height: 50px;
+    align-content: center;
+    margin: 5px;
+}
+.sideBar .menu i,a{
+    color: grey;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.sideBar .social_media{
+    position: absolute;
+    bottom: 20px;
+    left: 25%;   
+}
+.sideBar .social_media a{
+    margin-left: 10px; 
+}
+.sideBar .menu li:hover{
+    font-size: 20px;
+    box-shadow:  2px 2px 15px gray;
+}
+.sideBar .social_media i:hover{
+    color: white;
+    transform: scale(1.5);
+} 
+#check{
+    display: none;
+}
+.btn_one:hover i{
+    font-size: 40px;
+}
+.btn_two:hover i{
+    font-size: 25px;
+}
+.WebsiteLogo a:hover{
+    font-size: 22px;
+}
+#check:checked ~ .sideBar{
+    left: 0px;
+}
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+#check:checked ~ .sideBar .btn_two i{
+    opacity: 1;
+}
